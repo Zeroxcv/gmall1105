@@ -2,6 +2,7 @@ package com.atguigugmall.user.controller;
 
 
 import com.atguigugmall.user.bean.UmsMember;
+import com.atguigugmall.user.bean.UmsMemberReceiveAddress;
 import com.atguigugmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,8 +23,8 @@ public class UserController {
 //        List<UmsMember> umsMembers = userService.getAllUser();
 //        return umsMembers;
 //    }
-@Autowired
-UserService userService;
+    @Autowired
+    UserService userService;
     @RequestMapping("getAllUser")
     @ResponseBody
     public List<UmsMember> getAllUser(){
@@ -35,5 +36,12 @@ UserService userService;
     @ResponseBody
     public String index(){
         return "hello user";
+    }
+
+    @RequestMapping("getReceiveAddressByMemberId")
+    @ResponseBody
+    public List<UmsMemberReceiveAddress> getReceiveAddressByMemberId(String memberId){
+        List<UmsMemberReceiveAddress> umsMemberReceiveAddresses = userService.getReceiveAddressByMemberId(memberId);
+        return umsMemberReceiveAddresses;
     }
 }
