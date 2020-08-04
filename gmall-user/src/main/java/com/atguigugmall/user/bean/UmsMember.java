@@ -9,6 +9,7 @@ public class UmsMember {
 
     @Id
 
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private String id;
