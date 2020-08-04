@@ -26,6 +26,7 @@ public class UserServiceImpl implements UserService {
     UserMapper userMapper;
     @Autowired
     UmsMemberReceiveAddressMapper umsMemberReceiveAddressMapper;
+
     @Override
     public List<UmsMember> getAllUser() {
 
