@@ -24,7 +24,6 @@ public class UserServiceImpl implements UserService {
 //    }
     @Autowired
     UserMapper userMapper;
-
     @Autowired
     UmsMemberReceiveAddressMapper umsMemberReceiveAddressMapper;
     @Override
