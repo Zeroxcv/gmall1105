@@ -12,6 +12,7 @@ public class UmsMember {
 
 
 
+
     private String id;
     private String memberLevelId;
     private String username;
