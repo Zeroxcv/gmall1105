@@ -32,6 +32,7 @@ public class UserServiceImpl implements UserService {
 
         List<UmsMember> umsMemberList  = userMapper.selectAll();//userMapper.selectAllUser();
 
+
         return umsMemberList;
     }
 
